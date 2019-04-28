@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Cena/Level2.gd" type="Script" id=1]
 [ext_resource path="res://chaoTerra.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://BarraEnergia.tscn" type="PackedScene" id=11]
 [ext_resource path="res://BarraVida.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Música/Musica selva Final.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Escuridão.tscn" type="PackedScene" id=14]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.1357, 776.364 )
@@ -294,7 +295,7 @@ position = Vector2( 6210, 340 )
 
 [node name="Sombra3" parent="." instance=ExtResource( 9 )]
 position = Vector2( 11370, 200 )
-scale = Vector2( 1, 1 )
+scale = Vector2( 0.75, 0.75 )
 
 [node name="Shrek2" parent="." instance=ExtResource( 8 )]
 position = Vector2( 5729.03, -50 )
@@ -366,5 +367,8 @@ shape = SubResource( 1 )
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
 autoplay = true
+
+[node name="Escuridao" parent="." instance=ExtResource( 14 )]
+visible = false
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
