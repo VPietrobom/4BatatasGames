@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Video/Videoleozin.ogv" type="VideoStream" id=1]
+
+[node name="Historia" type="Node2D"]
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_right = 1025.0
+margin_bottom = 599.0
+stream = ExtResource( 1 )
+autoplay = true
+
