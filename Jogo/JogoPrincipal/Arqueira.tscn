@@ -24,6 +24,7 @@ centered = false
 script = SubResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 104.257, 127.063 )
 shape = SubResource( 1 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
