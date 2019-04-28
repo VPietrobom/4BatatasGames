@@ -7,9 +7,9 @@ var dir_x = 1
 var jump = 800
 var puloDuplo = true
 
-onready var texturaAndando = preload("res://Sprite/lanceiro/andando.png")
-onready var texturaParado = preload("res://Sprite/lanceiro/parado.png")
-onready var texturaAtaque = preload("res://Sprite/lanceiro/atacando.png")
+onready var texturaAndando = preload("res://Sprite/escudeiro/andando.png")
+onready var texturaParado = preload("res://Sprite/escudeiro/parado.png")
+onready var texturaAtaque = preload("res://Sprite/escudeiro/atacando.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -45,16 +45,16 @@ func _process(delta):
 		if Input.is_action_just_pressed("Cima"):
 			puloDuplo = false
 			velocidade_atual.y = -jump
-	
-	if(is_on_ceiling()):
-		velocidade_atual.y = 0
-				
+			
 	$Area2D/CollisionShape2D.set_disabled(true)
 	if(Input.is_action_just_pressed("Ataque")):
 		$Sprite.texture = texturaAtaque
 		$Area2D/CollisionShape2D.set_disabled(false)
 		
 		pass
+	
+	if(is_on_ceiling()):
+		velocidade_atual.y = 0
 	
 	move_and_slide(velocidade_atual, Vector2(0, -1))
 		

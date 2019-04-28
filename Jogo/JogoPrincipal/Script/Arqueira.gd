@@ -43,6 +43,9 @@ func _process(delta):
 			puloDuplo = false
 			velocidade_atual.y = -jump
 	
+	if(is_on_ceiling()):
+		velocidade_atual.y = 0
+	
 	move_and_slide(velocidade_atual, Vector2(0, -1))
 		
 	pass
