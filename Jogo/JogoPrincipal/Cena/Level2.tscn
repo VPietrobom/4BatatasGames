@@ -262,47 +262,38 @@ texture = ExtResource( 5 )
 
 [node name="BatataColetavel" parent="." instance=ExtResource( 6 )]
 position = Vector2( 4820, 380 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="MoedaColetavel" parent="." instance=ExtResource( 7 )]
 position = Vector2( 6610, 404.429 )
 scale = Vector2( 0.25, 0.25 )
 
 [node name="Shrek" parent="." instance=ExtResource( 8 )]
-position = Vector2( 6580, 100 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 6590, -60 )
 
 [node name="Shrek3" parent="." instance=ExtResource( 8 )]
-position = Vector2( 9240, 354 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 9150, 220 )
 
 [node name="MoedaColetavel3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 11850, -330 )
-scale = Vector2( 0.5, 0.5 )
 
 [node name="MoedaColetavel4" parent="." instance=ExtResource( 7 )]
-position = Vector2( 13080, 263.726 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 13090, 360 )
 
 [node name="Shrek4" parent="." instance=ExtResource( 8 )]
-position = Vector2( 10770, -140 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 10730, -284.296 )
 
 [node name="Sombra2" parent="." instance=ExtResource( 9 )]
-position = Vector2( 6210, 390 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 6210, 340 )
 
 [node name="Sombra3" parent="." instance=ExtResource( 9 )]
-position = Vector2( 11390, 340 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 11370, 200 )
+scale = Vector2( 1, 1 )
 
 [node name="Shrek2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 5800, 100 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 5729.03, -50 )
 
 [node name="BatataColetavel2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 6240, -110 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 6230, -130 )
 
 [node name="Sombra" parent="." instance=ExtResource( 9 )]
 position = Vector2( 3550, 90 )
@@ -348,4 +339,7 @@ position = Vector2( 11992.4, -250 )
 
 [node name="PlataformaMadeira19" parent="." instance=ExtResource( 4 )]
 position = Vector2( 12983, -430 )
+
+[node name="MoedaColetavel5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3810, 395.932 )
 
