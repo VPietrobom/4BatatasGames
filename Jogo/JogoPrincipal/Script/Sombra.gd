@@ -30,6 +30,7 @@ var posicaoAnterior = Vector2(0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	add_to_group("Monstros")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -55,7 +56,8 @@ func _process(delta):
 	move_and_slide_with_snap(velocidade, Vector2(0,5), Vector2(0, -1))
 	
 	
-
+func levardano(x):
+	pass
 func _on_Area2D_area_entered(area):
 	if(area.is_in_group("Luz")):
 		vida -= 1

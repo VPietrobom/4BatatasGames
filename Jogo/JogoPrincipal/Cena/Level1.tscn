@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Cena/Level1.gd" type="Script" id=1]
 [ext_resource path="res://chaoTerra.tscn" type="PackedScene" id=2]
@@ -6,15 +6,19 @@
 [ext_resource path="res://MoedaColetavel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://PlataformaMadeira.tscn" type="PackedScene" id=5]
 [ext_resource path="res://BatataColetavel.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Escuridão.tscn" type="PackedScene" id=7]
-[ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=8]
-[ext_resource path="res://BarraVida.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Sprite/adam-peterson-arrival-landing.jpg" type="Texture" id=10]
-[ext_resource path="res://MoedaEscondida.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Música/Musica selva Final.ogg" type="AudioStream" id=12]
-[ext_resource path="res://BarraEnergia.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Sombra.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Shrek.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Sombra.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Shrek.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Escuridão.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sprite/Escuridão.png" type="Texture" id=10]
+[ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=11]
+[ext_resource path="res://BarraVida.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Sprite/adam-peterson-arrival-landing.jpg" type="Texture" id=13]
+[ext_resource path="res://MoedaEscondida.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Música/Musica selva Final.ogg" type="AudioStream" id=15]
+[ext_resource path="res://BarraEnergia.tscn" type="PackedScene" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 500, 500 )
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -236,15 +240,25 @@ position = Vector2( 780, 372.5 )
 [node name="BatataColetavel2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1210, 370 )
 
-[node name="Escuridão" parent="." instance=ExtResource( 7 )]
-visible = false
+[node name="Sombra" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2121.31, 361.144 )
 
-[node name="CanvasLayer" parent="." instance=ExtResource( 8 )]
+[node name="Shrek" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4510.36, 272.304 )
 
-[node name="BarraVida" parent="." instance=ExtResource( 9 )]
+[node name="Escuridão" parent="." instance=ExtResource( 9 )]
+
+[node name="Sprite2" type="Sprite" parent="Escuridão"]
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Escuridão"]
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 11 )]
+
+[node name="BarraVida" parent="." instance=ExtResource( 12 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.3, 1 )
@@ -252,20 +266,14 @@ motion_mirroring = Vector2( 2700, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 scale = Vector2( 1.44193, 1.28 )
-texture = ExtResource( 10 )
+texture = ExtResource( 13 )
 
-[node name="MoedaEscondida" parent="." instance=ExtResource( 11 )]
+[node name="MoedaEscondida" parent="." instance=ExtResource( 14 )]
 position = Vector2( 3310, -10 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 12 )
+stream = ExtResource( 15 )
 autoplay = true
 
-[node name="BarraVida2" parent="." instance=ExtResource( 13 )]
-
-[node name="Sombra" parent="." instance=ExtResource( 14 )]
-position = Vector2( 2121.31, 361.144 )
-
-[node name="Shrek" parent="." instance=ExtResource( 15 )]
-position = Vector2( 4510.36, 272.304 )
+[node name="BarraVida2" parent="." instance=ExtResource( 16 )]
 

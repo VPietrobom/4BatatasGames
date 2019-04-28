@@ -1,6 +1,6 @@
 extends Sprite
 
-onready var textura4 = preload("res://Sprite/Lanca/parado.png")
+onready var textura4 = preload("res://Sprite/Lanceiro/parado.png")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

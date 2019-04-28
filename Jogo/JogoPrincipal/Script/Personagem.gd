@@ -6,6 +6,8 @@ var GRAVITY = 2000
 var dir_x = 1
 var jump = 800
 var puloDuplo = true
+var andando = false
+var vida =1500
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -23,6 +25,10 @@ func _process(delta):
 		dir_x = -1
 		andando = false
 	
+
+
+		pass
+	
 	if(is_on_floor()):
 		puloDuplo = true
 		velocidade_atual.y = 0
@@ -34,5 +40,14 @@ func _process(delta):
 			velocidade_atual.y = -jump
 	
 	move_and_slide(velocidade_atual, Vector2(0, -1))
-		
 	pass
+
+func _on_Area2D_body_entered(body):
+		if body.is_in_group("Monstros"):
+			vida -= 100
+			pass
+		if (vida <=0):
+			self.queue_free()
+			pass
+		pass
+

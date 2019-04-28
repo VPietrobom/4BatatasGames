@@ -5,10 +5,11 @@ var velocidade_atual = Vector2(0, 0)
 var SPEED = 200
 var GRAVITY = 2000
 var jump = 800
-var vida = 150
+var vida = 450
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	add_to_group("Monstros")
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -31,10 +32,12 @@ func _process(delta):
 			velocidade_atual.y -= jump
 			pass
 		pass
-	
+	if(vida <= 0):
+		self.queue_free()
 	move_and_slide_with_snap(velocidade_atual, Vector2(0,5), Vector2(0, -1))
 	pass
-
+func levardano(x):
+	vida -= x
 func _on_Area2D_area_entered(area):
 	if(area.is_in_group()):
 		pass

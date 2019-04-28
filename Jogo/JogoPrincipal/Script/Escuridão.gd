@@ -10,12 +10,15 @@ func _ready():
 
 func _process(delta):
 	position = get_parent().get_node("Personagem").position
-	if(scriptGlobal.lanterna == true and scriptGlobal.energia == 0):
-		$Sprite.scale.x = 1
-		$Sprite.scale.y = 1
+	if(scriptGlobal.lanterna == true and scriptGlobal.energia != 0):
+		$Sprite2.scale.x = 0
+		$Sprite2.scale.y = 0
+	elif(scriptGlobal.lanterna == true and scriptGlobal.energia == 0):
+		$Sprite2.scale.x = 3
+		$Sprite2.scale.y = 3
 	elif(scriptGlobal.temLanterna == true):
-		$Sprite.scale.x = 1
-		$Sprite.scale.y = 1
+		$Sprite2.scale.x = 3
+		$Sprite2.scale.y = 3
 	else:
-		$Sprite.scale.x = 1
-		$Sprite.scale.y = 1
+		$Sprite2.scale.x = 3
+		$Sprite2.scale.y = 3
