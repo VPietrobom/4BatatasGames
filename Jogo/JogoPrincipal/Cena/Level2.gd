@@ -4,7 +4,7 @@ extends Node2D
 # var a = 2
 
 var cena_personagem = load(scriptGlobal.hero)
-
+var personagem = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var personagem = cena_personagem.instance()
@@ -20,3 +20,9 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
+
+
+func _on_Area2D_body_entered(body):
+	if personagem == body:
+		get_tree().change_scene("res://Cena/Level2.tscn")
+	pass # Replace with function body.
