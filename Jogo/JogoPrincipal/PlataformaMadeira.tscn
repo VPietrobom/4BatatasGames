@@ -5,14 +5,16 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 160.073, 20.0889 )
 
-[node name="StaticBody2D" type="StaticBody2D"]
+[node name="PlataformaMadeira" type="StaticBody2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 160.35, 81.1546 )
-scale = Vector2( 0.25, 0.25 )
+position = Vector2( 0.214638, -159.873 )
+scale = Vector2( 0.2, 0.5 )
 texture = ExtResource( 1 )
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 160.325, 21.2127 )
+position = Vector2( 127.765, 40.0016 )
+scale = Vector2( 0.8, 2 )
 shape = SubResource( 1 )
 
