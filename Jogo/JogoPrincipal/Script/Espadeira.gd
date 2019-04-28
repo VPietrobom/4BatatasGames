@@ -75,11 +75,12 @@ func _process(delta):
 	if(is_on_ceiling() and velocidade_atual.y < 0):
 		velocidade_atual.y = 0
 				
-	$Espada/CollisionShape2D.set_disabled(true)
-	if(Input.is_action_just_pressed("Ataque")):
+	if(Input.is_action_pressed("Ataque")):
 		$Sprite.texture = texturaAtaque
 		$Espada/CollisionShape2D.set_disabled(false)
 		luz = false
+	else:
+		$Espada/CollisionShape2D.set_disabled(true)
 	
 	
 	if(Input.is_action_pressed("Lanterna") and scriptGlobal.temLanterna):

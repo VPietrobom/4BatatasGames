@@ -4,22 +4,18 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
-var direcao = Vector2(1, 0)
-var velocidade = 500
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+#func _process(delta):
+#	pass
+
+
+func _on_Inicio_body_entered(body):
+	self.get_parent().get_node("Escuridao").escalonamentoExterno = false
 	
-	position += delta*velocidade*direcao
-	pass
-
-
-func _on_Flecha_body_entered(body):
-	#if body.is_in_group("Monstros"):
-	#	body.levardano(50)
-	if not body.is_in_group("Personagem"):
-		self.queue_free()
+	self.get_parent().get_node("Boss1").comecar = true
+	
 	pass # Replace with function body.

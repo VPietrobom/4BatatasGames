@@ -4,7 +4,7 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
-var moedaDefinicao = load("res://MoedaColetavel.tscn")
+var moedaDefinicao = load("res://Cena/moedagamux.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

@@ -40,11 +40,14 @@ texture = ExtResource( 2 )
 position = Vector2( 51.276, 62.2157 )
 shape = SubResource( 1 )
 
-[node name="Espada" type="Area2D" parent="."]
-editor/display_folded = true
+[node name="Espada" type="Area2D" parent="." groups=[
+"Arma",
+]]
 position = Vector2( 63.3111, 67.6243 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Espada"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Espada" groups=[
+"Arma",
+]]
 position = Vector2( 58.3109, 1.2683 )
 rotation = 1.5708
 shape = SubResource( 2 )

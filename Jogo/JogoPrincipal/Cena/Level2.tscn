@@ -1,4 +1,365 @@
-[gd_scene format=2]
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Cena/Level2.gd" type="Script" id=1]
+[ext_resource path="res://chaoTerra.tscn" type="PackedScene" id=2]
+[ext_resource path="res://chaoGrama.tscn" type="PackedScene" id=3]
+[ext_resource path="res://PlataformaMadeira.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sprite/adam-peterson-arrival-landing.jpg" type="Texture" id=5]
+[ext_resource path="res://BatataColetavel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://MoedaColetavel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Shrek.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sombra.tscn" type="PackedScene" id=9]
+[ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=10]
+[ext_resource path="res://BarraEnergia.tscn" type="PackedScene" id=11]
+[ext_resource path="res://BarraVida.tscn" type="PackedScene" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 11.1357, 776.364 )
 
 [node name="Level2" type="Node2D"]
+script = ExtResource( 1 )
 
+[node name="chaoTerra" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2042.6, 495.313 )
+
+[node name="chaoTerra3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2551.54, 495.312 )
+
+[node name="chaoTerra5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2556.09, 397.613 )
+
+[node name="chaoTerra8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3065.03, 495.312 )
+
+[node name="chaoTerra9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3062.76, 404.429 )
+
+[node name="chaoTerra13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4585.83, 496.483 )
+
+[node name="chaoTerra11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3062.76, 306.73 )
+
+[node name="chaoTerra2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2297.07, 495.313 )
+
+[node name="chaoTerra4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2808.29, 495.313 )
+
+[node name="chaoTerra6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2810.56, 404.43 )
+
+[node name="chaoTerra7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3317.23, 495.313 )
+
+[node name="chaoTerra10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3317.23, 404.429 )
+
+[node name="chaoTerra14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4840.3, 496.483 )
+
+[node name="chaoTerra12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3317.23, 306.73 )
+
+[node name="chaoGrama" parent="." instance=ExtResource( 3 )]
+
+[node name="chaoGrama37" parent="." instance=ExtResource( 3 )]
+position = Vector2( -253.991, -886.751 )
+scale = Vector2( 0.25, 3.21 )
+
+[node name="chaoGrama5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1025.21, 491.151 )
+
+[node name="chaoGrama3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 512.718, 491.151 )
+
+[node name="chaoGrama8" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1536.12, 491.151 )
+
+[node name="chaoGrama10" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2044.56, 397.646 )
+
+[node name="chaoGrama11" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2554.94, 302.193 )
+
+[node name="chaoGrama13" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3063.88, 211.31 )
+
+[node name="chaoGrama15" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3827.3, 211.31 )
+
+[node name="chaoGrama17" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3825.03, 490.775 )
+
+[node name="chaoGrama19" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4331.7, 490.775 )
+
+[node name="chaoGrama23" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4842.18, 395.932 )
+
+[node name="chaoGrama29" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5601.29, 490.986 )
+
+[node name="chaoGrama40" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8402.22, 490.986 )
+
+[node name="chaoGrama58" parent="." instance=ExtResource( 3 )]
+position = Vector2( 12228, 490.986 )
+
+[node name="chaoGrama34" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6876.05, 490.986 )
+
+[node name="chaoGrama51" parent="." instance=ExtResource( 3 )]
+position = Vector2( 10701.9, 490.986 )
+
+[node name="chaoGrama41" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9676.98, 490.986 )
+
+[node name="chaoGrama62" parent="." instance=ExtResource( 3 )]
+position = Vector2( 13503.7, 960 )
+scale = Vector2( 0.299134, -5.03 )
+
+[node name="chaoGrama21" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4331.7, 490.775 )
+
+[node name="chaoGrama25" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6114.18, 489.932 )
+
+[node name="chaoGrama28" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8915.11, 489.932 )
+
+[node name="chaoGrama56" parent="." instance=ExtResource( 3 )]
+position = Vector2( 12740.9, 489.932 )
+
+[node name="chaoGrama32" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7388.93, 489.932 )
+
+[node name="chaoGrama50" parent="." instance=ExtResource( 3 )]
+position = Vector2( 11214.7, 489.932 )
+
+[node name="chaoGrama39" parent="." instance=ExtResource( 3 )]
+position = Vector2( 10190, 489.932 )
+
+[node name="chaoGrama35" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7644.93, 489.932 )
+
+[node name="chaoGrama49" parent="." instance=ExtResource( 3 )]
+position = Vector2( 11470.7, 489.932 )
+
+[node name="chaoGrama38" parent="." instance=ExtResource( 3 )]
+position = Vector2( 10445.9, 489.932 )
+
+[node name="chaoGrama48" parent="." instance=ExtResource( 3 )]
+position = Vector2( 10445.9, 489.932 )
+
+[node name="chaoGrama2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 255.676, 491.151 )
+
+[node name="chaoGrama7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1279.08, 491.151 )
+
+[node name="chaoGrama4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 766.585, 491.151 )
+
+[node name="chaoGrama6" parent="." instance=ExtResource( 3 )]
+position = Vector2( 1789.99, 491.151 )
+
+[node name="chaoGrama9" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2298.42, 397.646 )
+
+[node name="chaoGrama12" parent="." instance=ExtResource( 3 )]
+position = Vector2( 2808.8, 302.193 )
+
+[node name="chaoGrama14" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3317.75, 211.31 )
+
+[node name="chaoGrama16" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3572.22, 211.31 )
+
+[node name="chaoGrama18" parent="." instance=ExtResource( 3 )]
+position = Vector2( 3569.95, 490.775 )
+
+[node name="chaoGrama20" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4076.62, 490.775 )
+
+[node name="chaoGrama24" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4587.1, 395.932 )
+
+[node name="chaoGrama30" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5350, 490.986 )
+
+[node name="chaoGrama42" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8150.93, 490.986 )
+
+[node name="chaoGrama61" parent="." instance=ExtResource( 3 )]
+position = Vector2( 11976.7, 490.986 )
+
+[node name="chaoGrama36" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6620.97, 490.986 )
+
+[node name="chaoGrama43" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9421.9, 490.986 )
+
+[node name="chaoGrama64" parent="." instance=ExtResource( 3 )]
+position = Vector2( 13247.7, 490.986 )
+
+[node name="chaoGrama22" parent="." instance=ExtResource( 3 )]
+position = Vector2( 4076.62, 490.775 )
+
+[node name="chaoGrama26" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5858.1, 490.932 )
+
+[node name="chaoGrama44" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8659.03, 490.932 )
+
+[node name="chaoGrama57" parent="." instance=ExtResource( 3 )]
+position = Vector2( 12484.8, 490.932 )
+
+[node name="chaoGrama31" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7132.86, 490.932 )
+
+[node name="chaoGrama52" parent="." instance=ExtResource( 3 )]
+position = Vector2( 10958.7, 490.932 )
+
+[node name="chaoGrama45" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9933.79, 490.932 )
+
+[node name="chaoGrama27" parent="." instance=ExtResource( 3 )]
+position = Vector2( 5100, 489.932 )
+
+[node name="chaoGrama46" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7900.93, 489.932 )
+
+[node name="chaoGrama60" parent="." instance=ExtResource( 3 )]
+position = Vector2( 11726.7, 489.932 )
+
+[node name="chaoGrama33" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6370.97, 491.986 )
+
+[node name="chaoGrama47" parent="." instance=ExtResource( 3 )]
+position = Vector2( 9171.9, 491.986 )
+
+[node name="chaoGrama53" parent="." instance=ExtResource( 3 )]
+position = Vector2( 12997.7, 491.986 )
+
+[node name="PlataformaMadeira3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5601.26, 229.599 )
+
+[node name="PlataformaMadeira4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5859.56, 229.599 )
+
+[node name="PlataformaMadeira5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6380.94, 229.599 )
+
+[node name="PlataformaMadeira6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6641.63, 229.599 )
+
+[node name="PlataformaMadeira7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6125.03, -74.1415 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 1920, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 5 )
+
+[node name="BatataColetavel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4820, 380 )
+
+[node name="MoedaColetavel" parent="." instance=ExtResource( 7 )]
+position = Vector2( 6610, 404.429 )
+scale = Vector2( 0.25, 0.25 )
+
+[node name="Shrek" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6590, -60 )
+
+[node name="Shrek3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9150, 220 )
+
+[node name="MoedaColetavel3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 11850, -330 )
+
+[node name="MoedaColetavel4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 13090, 360 )
+
+[node name="Shrek4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10730, -284.296 )
+
+[node name="Sombra2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 6210, 340 )
+
+[node name="Sombra3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 11370, 200 )
+scale = Vector2( 1, 1 )
+
+[node name="Shrek2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5729.03, -50 )
+
+[node name="BatataColetavel2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 6230, -130 )
+
+[node name="Sombra" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3550, 90 )
+
+[node name="MoedaColetavel2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 8010, 370 )
+
+[node name="PlataformaMadeira20" parent="." instance=ExtResource( 4 )]
+position = Vector2( 13239.2, -429.873 )
+
+[node name="PlataformaMadeira8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 9420.79, 263.726 )
+
+[node name="PlataformaMadeira13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10450, 10 )
+
+[node name="PlataformaMadeira16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 11479.4, -250 )
+
+[node name="PlataformaMadeira21" parent="." instance=ExtResource( 4 )]
+position = Vector2( 12470, -430 )
+
+[node name="PlataformaMadeira9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 9676.21, 263.726 )
+
+[node name="PlataformaMadeira11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10705.4, 10 )
+
+[node name="PlataformaMadeira14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 11734.8, -250 )
+
+[node name="PlataformaMadeira17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 12725.4, -430 )
+
+[node name="PlataformaMadeira10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 9933.79, 263.726 )
+
+[node name="PlataformaMadeira12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10963, 10 )
+
+[node name="PlataformaMadeira15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 11992.4, -250 )
+
+[node name="PlataformaMadeira19" parent="." instance=ExtResource( 4 )]
+position = Vector2( 12983, -430 )
+
+[node name="MoedaColetavel5" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3810, 395.932 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 13354.5, -897.923 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -110.195, -266.614 )
+shape = SubResource( 1 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 10 )]
+
+[node name="BarraEnergia" parent="." instance=ExtResource( 11 )]
+
+[node name="BarraVida" parent="." instance=ExtResource( 12 )]
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

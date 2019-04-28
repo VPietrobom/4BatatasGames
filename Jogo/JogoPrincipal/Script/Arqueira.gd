@@ -92,7 +92,7 @@ func _process(delta):
 		
 		luz = false
 	
-	if(Input.is_action_pressed("Lanterna") and scriptGlobal.temLanterna):
+	if(Input.is_action_pressed("Lanterna") and scriptGlobal.temLanterna == true):
 		scriptGlobal.lanterna = true
 		
 		if(scriptGlobal.energia>0):
