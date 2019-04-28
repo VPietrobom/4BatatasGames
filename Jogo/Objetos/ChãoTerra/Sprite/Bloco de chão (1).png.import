@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bloco de chão (1).png-55feb4ab9c6c8636238f250be4c4550f.stex"
+path="res://.import/Bloco de chão (1).png-f475ed043e96497cbb77f736795fffb5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Bloco de chão (1).png"
-dest_files=[ "res://.import/Bloco de chão (1).png-55feb4ab9c6c8636238f250be4c4550f.stex" ]
+source_file="res://ChãoTerra/Sprite/Bloco de chão (1).png"
+dest_files=[ "res://.import/Bloco de chão (1).png-f475ed043e96497cbb77f736795fffb5.stex" ]
 
 [params]
 
