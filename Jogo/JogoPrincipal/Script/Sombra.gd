@@ -20,7 +20,10 @@ onready var texturaParado2 = preload("res://Sprite/vilões player/espadaparado.p
 onready var texturaAndando3 = preload("res://Sprite/vilões player/lancaandando.png")
 onready var texturaParado3 = preload("res://Sprite/vilões player/lancaparado.png")
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 77a7447709411b3210a31865381b5494020004aa
 var vida = 5
 
 var velocidade = Vector2(0,0)
