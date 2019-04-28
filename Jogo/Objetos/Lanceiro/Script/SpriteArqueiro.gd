@@ -1,11 +1,9 @@
-extends Node
+extends Sprite
 
-var moeda = 0
-var batata = 0
-var personagemEscolhido = -1
-var vida = 100
-var temLanterna
-var andando = true
+# Declare member variables here. Examples:
+# var a = 2
+# var b = "text"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
