@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Cena/Level1.gd" type="Script" id=1]
 [ext_resource path="res://chaoTerra.tscn" type="PackedScene" id=2]
@@ -13,8 +13,6 @@
 [ext_resource path="res://MoedaEscondida.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Música/Musica selva Final.ogg" type="AudioStream" id=12]
 [ext_resource path="res://BarraEnergia.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Sombra.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Shrek.tscn" type="PackedScene" id=15]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -237,7 +235,6 @@ position = Vector2( 780, 372.5 )
 position = Vector2( 1210, 370 )
 
 [node name="Escuridão" parent="." instance=ExtResource( 7 )]
-visible = false
 
 [node name="CanvasLayer" parent="." instance=ExtResource( 8 )]
 
@@ -263,9 +260,11 @@ autoplay = true
 
 [node name="BarraVida2" parent="." instance=ExtResource( 13 )]
 
+<<<<<<< HEAD
+=======
 [node name="Sombra" parent="." instance=ExtResource( 14 )]
 position = Vector2( 2121.31, 361.144 )
 
-[node name="Shrek" parent="Sombra" instance=ExtResource( 15 )]
-position = Vector2( 5073.81, 29.1628 )
-
+[node name="Shrek" parent="." instance=ExtResource( 15 )]
+position = Vector2( 4510.36, 272.304 )
+>>>>>>> e52d62cf61d69bbb3b727798feb516aaa0d33174
