@@ -9,7 +9,6 @@ func _ready():
 	var personagem = cena_personagem.instance()
 	personagem.name = "Personagem"
 	add_child(personagem)
-	$Shrek.Jogador = personagem
 	personagem.position.x = 50
 	pass # Replace with function body.
 

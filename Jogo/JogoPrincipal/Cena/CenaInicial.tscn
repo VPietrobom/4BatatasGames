@@ -18,3 +18,4 @@ func _ready():
 
 [node name="Node2D" type="Node2D"]
 script = SubResource( 1 )
+

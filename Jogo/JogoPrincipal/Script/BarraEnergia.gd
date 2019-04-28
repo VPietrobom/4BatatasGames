@@ -18,6 +18,6 @@ func _process(delta):
 				scriptGlobal.batata -= 1
 				scriptGlobal.energia = 100
 		else:
-			scriptGlobal.energia = int(scriptGlobal.energia - delta * taxaEnergia)	
+			scriptGlobal.energia -= delta * taxaEnergia	
 			if(scriptGlobal.energia < 0):
 				scriptGlobal.energia = 0

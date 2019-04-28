@@ -35,3 +35,4 @@ playing = true
 [node name="Skate" type="Sprite" parent="."]
 position = Vector2( 95.6663, -264.341 )
 texture = ExtResource( 4 )
+
