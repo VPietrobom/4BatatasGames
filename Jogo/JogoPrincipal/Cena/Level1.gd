@@ -21,7 +21,7 @@ func _ready():
 
 
 func _on_Area2D_body_entered(body):
-	if personagem == body:
+	if body.is_in_group("Personagem"):
 		get_tree().change_scene("res://Cena/Level2.tscn")
 		print('0')
 	pass # Replace with function body.
