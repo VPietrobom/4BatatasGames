@@ -13,8 +13,8 @@ func _ready():
 #	pass
 
 
-func _on_MoedaColetavel_body_entered(body):
+func _on_BatataColetavel_body_entered(body):
 	if(body.get_name() == "personagem"):
-		scriptGlobal.moeda += 1
+		scriptGlobal.batata += 1
 		self.queue_free()
 	pass # Replace with function body.

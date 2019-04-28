@@ -1,4 +1,4 @@
-extends Area2D
+extends KinematicBody2D
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -11,10 +11,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_MoedaColetavel_body_entered(body):
-	if(body.get_name() == "personagem"):
-		scriptGlobal.moeda += 1
-		self.queue_free()
-	pass # Replace with function body.
