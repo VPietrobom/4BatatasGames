@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Script/Arqueira.gd" type="Script" id=1]
 [ext_resource path="res://Sprite/arqueira/Latacando.png" type="Texture" id=2]
@@ -8,11 +8,15 @@
 script/source = "extends Sprite"
 
 [sub_resource type="CapsuleShape2D" id=2]
-radius = 84.8666
+radius = 83.0078
 height = 84.476
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 20, -75, 75, 20, -8.66025, 5 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 123.008
+height = 24.4348
 
 [node name="Arqueira" type="KinematicBody2D" groups=[
 "Personagem",
@@ -60,3 +64,11 @@ limit_left = 0
 limit_bottom = 600
 smoothing_enabled = true
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 104.257, 127.063 )
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

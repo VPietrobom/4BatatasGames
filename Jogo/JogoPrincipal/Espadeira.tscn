@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Script/Espadeira.gd" type="Script" id=1]
 [ext_resource path="res://Sprite/espadeira/Latacando.png" type="Texture" id=2]
@@ -14,6 +14,10 @@ height = 76.1015
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 20, -75, 75, 20, -8.66025, 5 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 48.724
+height = 42.552
 
 [node name="Espadeira" type="KinematicBody2D" groups=[
 "Personagem",
@@ -60,3 +64,11 @@ position = Vector2( 173.875, 20.5605 )
 scale = Vector2( 4.043, 3.705 )
 texture = ExtResource( 3 )
 
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 51.276, 60 )
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

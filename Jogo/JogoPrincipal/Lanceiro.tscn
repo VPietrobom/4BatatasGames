@@ -64,3 +64,9 @@ rotation = 0.523599
 scale = Vector2( 1.08426, 1.01345 )
 shape = SubResource( 3 )
 
+[node name="Area2D2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_Area2D2_body_exited"]

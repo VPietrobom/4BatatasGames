@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Script/Escudeiro.gd" type="Script" id=1]
 [ext_resource path="res://Sprite/escudeiro/Latacando.png" type="Texture" id=2]
@@ -14,6 +14,10 @@ height = 45.3697
 
 [sub_resource type="ConvexPolygonShape2D" id=3]
 points = PoolVector2Array( 20, -75, 75, 20, -8.66025, 5 )
+
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 44.5487
+height = 62.6724
 
 [node name="Escudeiro" type="KinematicBody2D" groups=[
 "Personagem",
@@ -59,3 +63,11 @@ position = Vector2( 84.9446, 4.40127 )
 rotation = 0.523599
 shape = SubResource( 3 )
 
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 45.4513, 65.8849 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="." method="_on_Area2D2_body_exited"]

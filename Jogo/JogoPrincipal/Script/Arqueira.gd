@@ -6,6 +6,8 @@ var GRAVITY = 2000
 var dir_x = 1
 var jump = 800
 var puloDuplo = true
+var vida = 1500
+var dentro  = false
 
 onready var texturaAndando = preload("res://Sprite/arqueira/andando.png")
 onready var texturaParado = preload("res://Sprite/arqueira/parado.png")
@@ -18,11 +20,18 @@ var luz = false
 
 var flechaDefinicao = load("res://Flecha.tscn")
 
+var intervalo = 0
+
+var tempo = 0
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
+	
+	intervalo = delta
+	
 	velocidade_atual.x = 0
 	velocidade_atual.y += delta*GRAVITY
 	if Input.is_action_pressed("Direita") and !Input.is_action_pressed("Esquerda"):
@@ -100,5 +109,26 @@ func _process(delta):
 		scriptGlobal.lanterna = false
 	
 	move_and_slide_with_snap(velocidade_atual, Vector2(0,5),Vector2(0, -1))
-		
+	
+	if(dentro):
+		if (tempo == 0):
+			vida -= 150
+		if (vida <= 0):
+			scriptGlobal.batata = 0
+			scriptGlobal.moeda = 0
+			get_tree().change_scene("res://Cena/Level1.tscn")
+		tempo += intervalo
+		if (tempo > 2):
+			tempo = 0
+			pass
 	pass
+
+
+func _on_Area2D_body_entered(body):
+	dentro = true
+	pass # Replace with function body.
+
+
+func _on_Area2D_body_exited(body):
+	dentro = false
+	pass # Replace with function body.
