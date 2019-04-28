@@ -266,6 +266,5 @@ autoplay = true
 [node name="Sombra" parent="." instance=ExtResource( 14 )]
 position = Vector2( 2121.31, 361.144 )
 
-[node name="Shrek" parent="Sombra" instance=ExtResource( 15 )]
-position = Vector2( 5073.81, 29.1628 )
-
+[node name="Shrek" parent="." instance=ExtResource( 15 )]
+position = Vector2( 4510.36, 272.304 )
