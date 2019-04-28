@@ -51,7 +51,7 @@ func _process(delta):
 		$Label.show()
 		parte2 = true
 	elif(vida<=0 and parte2 == true):
-		self.queue_free()
+		get_tree().change_scene("res://Cena/Level4.tscn")
 		
 	elif(vida<=0):
 		pass
