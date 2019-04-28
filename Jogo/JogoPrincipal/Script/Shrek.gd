@@ -5,7 +5,6 @@ var velocidade_atual = Vector2(0, 0)
 var SPEED = 200
 var GRAVITY = 2000
 var jump = 800
-var vida = 150
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -30,10 +29,6 @@ func _process(delta):
 		if (is_on_wall() and is_on_floor()):
 			velocidade_atual.y -= jump
 			pass
-		pass
-
-func _on_Area2D_area_entered(area):
-	if(area.is_in_group()):
 		pass
 
 	move_and_slide_with_snap(velocidade_atual, Vector2(0,5), Vector2(0, -1))
