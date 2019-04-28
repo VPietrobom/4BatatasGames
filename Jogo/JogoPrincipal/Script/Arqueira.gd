@@ -7,6 +7,9 @@ var dir_x = 1
 var jump = 800
 var puloDuplo = true
 
+onready var texturaAndando = preload("res://Sprite/arqueira/andando.png")
+onready var texturaParado = preload("res://Sprite/arqueira/parado.png")
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -17,17 +20,24 @@ func _process(delta):
 	if Input.is_action_pressed("Direita") and !Input.is_action_pressed("Esquerda"):
 		velocidade_atual.x = SPEED
 		dir_x = 1
-		andando = true
+		$Sprite.texture = texturaAndando
+		
+		$Sprite.flip_h = false	
 	if Input.is_action_pressed("Esquerda") and !Input.is_action_pressed("Direita"):
 		velocidade_atual.x = -SPEED
 		dir_x = -1
-		andando = false
-	
+		$Sprite.texture = texturaAndando
+		
+		$Sprite.flip_h = true
+	if !Input.is_action_pressed("Direita") and !Input.is_action_pressed("Esquerda"):
+		$Sprite.texture = texturaParado
+	 
 	if(is_on_floor()):
 		puloDuplo = true
 		velocidade_atual.y = 0
 		if Input.is_action_just_pressed("Cima"):
 			velocidade_atual.y -= jump
+			
 	elif puloDuplo:
 		if Input.is_action_just_pressed("Cima"):
 			puloDuplo = false
