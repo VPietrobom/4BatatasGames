@@ -9,6 +9,7 @@ var cena_personagem = load(scriptGlobal.hero)
 func _ready():
 	var personagem = cena_personagem.instance()
 	personagem.name = "Personagem"
+	personagem.get_child/("Camera2D").limit_right =	13503.711	
 	add_child(personagem)
 	$Shrek.Jogador = personagem
 	$Shrek2.Jogador = personagem
