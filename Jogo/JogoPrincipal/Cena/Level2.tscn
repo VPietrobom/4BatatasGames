@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Cena/Level2.gd" type="Script" id=1]
 [ext_resource path="res://chaoTerra.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=10]
 [ext_resource path="res://BarraEnergia.tscn" type="PackedScene" id=11]
 [ext_resource path="res://BarraVida.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Música/Musica selva Final.ogg" type="AudioStream" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 11.1357, 776.364 )
@@ -361,5 +362,9 @@ shape = SubResource( 1 )
 [node name="BarraEnergia" parent="." instance=ExtResource( 11 )]
 
 [node name="BarraVida" parent="." instance=ExtResource( 12 )]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+autoplay = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
