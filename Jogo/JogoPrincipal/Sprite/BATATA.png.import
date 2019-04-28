@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bloco de chão (1).png-55feb4ab9c6c8636238f250be4c4550f.stex"
+path="res://.import/BATATA.png-1e1447e9a977ba60b4d8119c0ee95745.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Bloco de chão (1).png"
-dest_files=[ "res://.import/Bloco de chão (1).png-55feb4ab9c6c8636238f250be4c4550f.stex" ]
+source_file="res://Sprite/BATATA.png"
+dest_files=[ "res://.import/BATATA.png-1e1447e9a977ba60b4d8119c0ee95745.stex" ]
 
 [params]
 
