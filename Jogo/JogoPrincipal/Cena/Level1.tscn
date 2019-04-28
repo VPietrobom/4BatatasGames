@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Cena/Level1.gd" type="Script" id=1]
 [ext_resource path="res://chaoTerra.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://BatataColetavel.tscn" type="PackedScene" id=6]
 [ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=7]
 [ext_resource path="res://BarraVida.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sprite/adam-peterson-arrival-landing.jpg" type="Texture" id=9]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -232,4 +233,14 @@ position = Vector2( 1210, 370 )
 [node name="CanvasLayer" parent="." instance=ExtResource( 7 )]
 
 [node name="BarraVida" parent="." instance=ExtResource( 8 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 2700, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 1.44193, 1.28 )
+texture = ExtResource( 9 )
 
