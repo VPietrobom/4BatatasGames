@@ -9,6 +9,9 @@ var puloDuplo = true
 
 onready var texturaAndando = preload("res://Sprite/arqueira/andando.png")
 onready var texturaParado = preload("res://Sprite/arqueira/parado.png")
+onready var texturaAtaque = preload("res://Sprite/arqueira/atacando.png")
+
+var flechaDefinicao = load("res://Flecha.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -43,6 +46,18 @@ func _process(delta):
 			puloDuplo = false
 			velocidade_atual.y = -jump
 	
+	if(Input.is_action_just_pressed("Ataque")):
+		$Sprite.texture = texturaAtaque
+		var flecha = flechaDefinicao.instance()
+		get_parent().add_child(flecha)
+		flecha.position = position
+		flecha.position.y += 60
+		if($Sprite.flip_h == true):
+			flecha.position.x = position.x - 68
+			flecha.get_node("Sprite").flip_h = true
+			flecha.direcao *= -1
+		else:
+			flecha.position.x = position.x + 68
 	if(is_on_ceiling()):
 		velocidade_atual.y = 0
 	
