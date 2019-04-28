@@ -2,8 +2,9 @@ extends Node2D
 
 # Declare member variables here. Examples:
 # var a = 2
-# var b = "text"
-var cena_personagem = load("res://Arqueira.tscn")
+
+var cena_personagem = load(scriptGlobal.hero)
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var personagem = cena_personagem.instance()

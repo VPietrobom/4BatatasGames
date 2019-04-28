@@ -6,6 +6,11 @@ extends KinematicBody2D
 
 onready var Jogador = null
 
+var velocidade_atual = Vector2(0, 0)
+var SPEED = 100
+var GRAVITY = 2000
+var jump = 800
+
 onready var texturaAndando0 = preload("res://Sprite/vilões player/arcoandando.png")
 onready var texturaParado0 = preload("res://Sprite/vilões player/arcoparado.png")
 onready var texturaAndando1 = preload("res://Sprite/vilões player/escudoandando.png")
@@ -42,6 +47,7 @@ func _process(delta):
 			elif Jogador.position.x > position.x:
 				velocidade.x = SPEED
 				$Sprite.flip_h = false
+
 		velocidade.y += GRAVITY*delta
 		if (is_on_floor()):
 			velocidade.y = 0
@@ -49,7 +55,10 @@ func _process(delta):
 		if (is_on_wall() and is_on_floor()):
 			velocidade.y -= jump
 			pass
+
 	move_and_slide_with_snap(velocidade, Vector2(0,5), Vector2(0, -1))
+	
+	
 
 func _on_Area2D_area_entered(area):
 	if(area.is_in_group("Luz")):
@@ -57,5 +66,3 @@ func _on_Area2D_area_entered(area):
 	
 	if(vida <= 0):
 		self.queue_free()
-
-	move_and_slide_with_snap(velocidade, Vector2(0,5), Vector2(0, -1))
