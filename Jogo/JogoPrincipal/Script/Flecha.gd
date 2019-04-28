@@ -18,8 +18,8 @@ func _process(delta):
 
 
 func _on_Flecha_body_entered(body):
-	if body.is_in_group("Monstros"):
-		body.levardano(50)
+	#if body.is_in_group("Monstros"):
+	#	body.levardano(50)
 	if not body.is_in_group("Personagem"):
 		self.queue_free()
 	pass # Replace with function body.

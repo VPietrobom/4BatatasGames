@@ -36,10 +36,10 @@ func _process(delta):
 		self.queue_free()
 	move_and_slide_with_snap(velocidade_atual, Vector2(0,5), Vector2(0, -1))
 	pass
-func levardano(x):
-	vida -= x
+	
 func _on_Area2D_area_entered(area):
-	if(area.is_in_group()):
+	if area.is_in_group("Arma"):
+		vida -= scriptGlobal.dano
 		pass
 
-	move_and_slide_with_snap(velocidade_atual, Vector2(0,5), Vector2(0, -1))
+	#move_and_slide_with_snap(velocidade_atual, Vector2(0,5), Vector2(0, -1))
