@@ -34,7 +34,6 @@ margin_bottom = 463.0
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 512.43, 300.518 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 2 )
 
 [connection signal="pressed" from="Arq" to="." method="_on_Arq_pressed"]

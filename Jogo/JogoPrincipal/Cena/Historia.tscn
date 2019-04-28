@@ -12,4 +12,20 @@ margin_bottom = 599.0
 stream = ExtResource( 2 )
 autoplay = true
 
+[node name="Button" type="Button" parent="."]
+margin_left = 885.563
+margin_top = 537.429
+margin_right = 897.563
+margin_bottom = 557.429
+rect_scale = Vector2( 11.5444, 3.05214 )
+
+[node name="Label" type="Label" parent="Button"]
+margin_left = 1.41107
+margin_top = 1.96637
+margin_right = 41.4111
+margin_bottom = 15.9664
+rect_scale = Vector2( 0.353057, 1.10094 )
+text = "Skip"
+
 [connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
