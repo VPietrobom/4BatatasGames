@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bloco de chão (1).png-55feb4ab9c6c8636238f250be4c4550f.stex"
+path="res://.import/Barra Vazia.png-0fae50e72637bcea670ec2cc19be939c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprite/Bloco de chão (1).png"
-dest_files=[ "res://.import/Bloco de chão (1).png-55feb4ab9c6c8636238f250be4c4550f.stex" ]
+source_file="res://Sprite/Barra Vazia.png"
+dest_files=[ "res://.import/Barra Vazia.png-0fae50e72637bcea670ec2cc19be939c.stex" ]
 
 [params]
 
