@@ -15,14 +15,14 @@ func _process(delta):
 	
 	if(!escalonamentoExterno):
 		if(scriptGlobal.lanterna == true and scriptGlobal.energia != 0):
-			$Sprite2.scale.x = 0
-			$Sprite2.scale.y = 0
+			$Sprite.scale.x = 0
+			$Sprite.scale.y = 0
 		elif(scriptGlobal.lanterna == true and scriptGlobal.energia == 0):
-			$Sprite2.scale.x = 3
-			$Sprite2.scale.y = 3
+			$Sprite.scale.x = 3
+			$Sprite.scale.y = 3
 		elif(scriptGlobal.temLanterna == true):
-			$Sprite2.scale.x = 3
-			$Sprite2.scale.y = 3
+			$Sprite.scale.x = 3
+			$Sprite.scale.y = 3
 		else:
-			$Sprite2.scale.x = 3
-			$Sprite2.scale.y = 3
+			$Sprite.scale.x = 3
+			$Sprite.scale.y = 3

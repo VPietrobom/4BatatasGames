@@ -1,9 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Script/Shrek.gd" type="Script" id=1]
+[ext_resource path="res://Script/Boss1.gd" type="Script" id=1]
 [ext_resource path="res://Sprite/Boss1/shrek mais forte andando.png" type="Texture" id=2]
 [ext_resource path="res://Sprite/Boss1/shrek mais forte.png" type="Texture" id=3]
-[ext_resource path="res://Sprite/Skate.png" type="Texture" id=4]
+[ext_resource path="res://Sprite/Boss1/vilao sherekão andando preto.png" type="Texture" id=4]
+[ext_resource path="res://Sprite/Boss1/vilão sherekão preto.png" type="Texture" id=5]
+[ext_resource path="res://Sprite/Skate.png" type="Texture" id=6]
+[ext_resource path="res://Fonte/BebasNeue-Regular.otf" type="DynamicFontData" id=7]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 54.1007
@@ -15,10 +18,19 @@ animations = [ {
 "loop": true,
 "name": "andando",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "Escuro",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 20.0
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 7 )
 
 [node name="Boss1" type="KinematicBody2D"]
 position = Vector2( 0, 2 )
@@ -30,8 +42,8 @@ position = Vector2( 93.4824, 130.623 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
-position = Vector2( 130, 88 )
-scale = Vector2( 0.85, 0.92541 )
+position = Vector2( 97.7005, 60.1049 )
+scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 2 )
 animation = "andando"
 frame = 1
@@ -39,17 +51,33 @@ playing = true
 
 [node name="Skate" type="Sprite" parent="."]
 position = Vector2( 95.6663, -264.341 )
-texture = ExtResource( 4 )
+texture = ExtResource( 6 )
 
 [node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 94.1901, 144.229 )
+rotation = 0.0174533
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 93.4824, 130.623 )
+position = Vector2( 0.112373, -1.65808 )
+scale = Vector2( -0.987839, 1.20256 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 56.2, 142.3 )
+position = Vector2( -64.3203, -2.8237 )
 rotation = 1.5708
 shape = SubResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -215.432
+margin_top = 46.6149
+margin_right = 34.5683
+margin_bottom = 151.615
+custom_fonts/font = SubResource( 4 )
+text = "Pode tornar-se mais seguro 
+mesmos nas sombras mais sombrias,
+ se você se lembrar de acender a luz.
+Use X para acendê-la"
+align = 1
+valign = 1
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

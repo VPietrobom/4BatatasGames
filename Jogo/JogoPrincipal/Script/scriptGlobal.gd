@@ -5,10 +5,10 @@ var batata = 0
 var energia = 0
 var personagemEscolhido = -1
 var vida = 100
-var temLanterna = true
+var temLanterna = false
 var andando = true
 var lanterna = false
-var hero = "res://Espadeira.tscn"
+var hero = "res://Arqueira.tscn"
 
 var dano = 0
 

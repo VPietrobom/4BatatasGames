@@ -1,11 +1,15 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Script/Level3.gd" type="Script" id=1]
+[ext_resource path="res://Cena/Level3.gd" type="Script" id=1]
 [ext_resource path="res://chaoGrama.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Script/Inicio.gd" type="Script" id=3]
 [ext_resource path="res://Escuridão.tscn" type="PackedScene" id=4]
 [ext_resource path="res://BarraVida.tscn" type="PackedScene" id=5]
 [ext_resource path="res://BarraEnergia.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Boss1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://BatataColetavel.tscn" type="PackedScene" id=8]
+[ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sprite/a72a9f367363d83ca70227d13f18c174.png" type="Texture" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -73,8 +77,28 @@ position = Vector2( 240, -30 )
 
 [node name="BarraEnergia" parent="." instance=ExtResource( 6 )]
 
-[node name="Boss" type="KinematicBody2D" parent="."]
+[node name="Boss1" parent="." instance=ExtResource( 7 )]
+position = Vector2( 2210, -110 )
 
-[node name="Sprite" type="Sprite" parent="Boss"]
+[node name="BatataColetavel" parent="." instance=ExtResource( 8 )]
+position = Vector2( 480, 450 )
+
+[node name="BatataColetavel2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 760, 440 )
+
+[node name="BatataColetavel3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1740, 430 )
+
+[node name="BatataColetavel4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1240, 430 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 9 )]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground"]
+position = Vector2( 440, 301.467 )
+scale = Vector2( 1.78125, 1.49267 )
+texture = ExtResource( 10 )
 
 [connection signal="body_entered" from="Inicio" to="Inicio" method="_on_Inicio_body_entered"]

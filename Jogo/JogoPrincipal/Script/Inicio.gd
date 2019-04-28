@@ -16,6 +16,6 @@ func _ready():
 func _on_Inicio_body_entered(body):
 	self.get_parent().get_node("Escuridao").escalonamentoExterno = false
 	
-	self.get_parent().get_node("Boss").comecar = true
+	self.get_parent().get_node("Boss1").comecar = true
 	
 	pass # Replace with function body.

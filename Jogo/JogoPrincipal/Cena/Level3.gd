@@ -11,7 +11,7 @@ func _ready():
 	personagem.name = "Personagem"
 	add_child(personagem)
 	personagem.position.x = 50
-	
+	$Boss1.Jogador = personagem
 	personagem.get_node("Camera2D").set_limit(2, 3086.958)	
 	
 	$Escuridao.get_node("Sprite").scale.x = 0.75
