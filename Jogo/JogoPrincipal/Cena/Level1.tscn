@@ -267,4 +267,7 @@ position = Vector2( 2121.31, 361.144 )
 
 [node name="Shrek" parent="." instance=ExtResource( 15 )]
 position = Vector2( 4510.36, 272.304 )
+<<<<<<< HEAD
+>>>>>>> e52d62cf61d69bbb3b727798feb516aaa0d33174
+=======
 >>>>>>> e52d62cf61d69bbb3b727798feb516aaa0d33174
