@@ -4,8 +4,8 @@
 [ext_resource path="res://Sprite/vilões player/lancaparado.png" type="Texture" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 137.435
-height = 26.0602
+radius = 77.3015
+height = 101.157
 
 [node name="Sombra" type="KinematicBody2D"]
 scale = Vector2( 0.5, 0.5 )
@@ -25,5 +25,4 @@ shape = SubResource( 1 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 131.765, 120.935 )
 shape = SubResource( 1 )
-
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]

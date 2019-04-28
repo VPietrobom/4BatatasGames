@@ -4,6 +4,8 @@ extends KinematicBody2D
 # var a = 2
 # var b = "text"
 
+onready var Jogador = null
+
 onready var texturaAndando0 = preload("res://Sprite/vilões player/arcoandando.png")
 onready var texturaParado0 = preload("res://Sprite/vilões player/arcoparado.png")
 onready var texturaAndando1 = preload("res://Sprite/vilões player/escudoandando.png")
@@ -12,6 +14,10 @@ onready var texturaAndando2 = preload("res://Sprite/vilões player/espadaandando
 onready var texturaParado2 = preload("res://Sprite/vilões player/espadaparado.png")
 onready var texturaAndando3 = preload("res://Sprite/vilões player/lancaandando.png")
 onready var texturaParado3 = preload("res://Sprite/vilões player/lancaparado.png")
+
+var SPEED = 100
+var GRAVITY = 2000
+var jump = 800
 
 var vida = 5
 
@@ -28,19 +34,22 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	if(posicaoAnterior.x - position.x == 0):
-		if(orientacao == "direita"):
-			orientacao = "esquerda"
-		else:
-			orientacao = "direita"
-	
-	if(orientacao == "direita"):
-		velocidade.x = 410
-	else:
-		velocidade.x -= 410
-	
-	posicaoAnterior = position
-	
+	if Jogador != null:
+		if ((self.position.x > Jogador.position.x and (self.position.x - Jogador.position.x) < 1000) or (Jogador.position.x > self.position.x and (Jogador.position.x - self.position.x) < 1000)):
+			if Jogador.position.x < position.x:
+				velocidade.x = -SPEED
+				$Sprite.flip_h = true
+			elif Jogador.position.x > position.x:
+				velocidade.x = SPEED
+				$Sprite.flip_h = false
+		velocidade.y += GRAVITY*delta
+		if (is_on_floor()):
+			velocidade.y = 0
+			pass
+		if (is_on_wall() and is_on_floor()):
+			velocidade.y -= jump
+			pass
+	move_and_slide_with_snap(velocidade, Vector2(0,5), Vector2(0, -1))
 
 func _on_Area2D_area_entered(area):
 	if(area.is_in_group("Luz")):
@@ -48,5 +57,5 @@ func _on_Area2D_area_entered(area):
 	
 	if(vida <= 0):
 		self.queue_free()
-	
-	pass # Replace with function body.
+
+	move_and_slide_with_snap(velocidade, Vector2(0,5), Vector2(0, -1))

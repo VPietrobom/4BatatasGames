@@ -10,6 +10,7 @@ func _ready():
 	personagem.name = "Personagem"
 	add_child(personagem)
 	$Shrek.Jogador = personagem
+	$Sombra.Jogador = personagem
 	personagem.position.x = 50
 	pass # Replace with function body.
 
