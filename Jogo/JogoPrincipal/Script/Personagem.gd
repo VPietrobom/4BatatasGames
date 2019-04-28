@@ -20,7 +20,8 @@ func _process(delta):
 	if Input.is_action_pressed("Esquerda") and !Input.is_action_pressed("Direita"):
 		velocidade_atual.x = -SPEED
 		dir_x = -1
-	
+	if(is_on_ceiling() and velocidade_atual.y < 0):
+		velocidade_atual.y = 0
 	if(is_on_floor()):
 		puloDuplo = true
 		velocidade_atual.y = 0
@@ -31,6 +32,6 @@ func _process(delta):
 			puloDuplo = false
 			velocidade_atual.y = -jump
 	
-	move_and_slide(velocidade_atual, Vector2(0, -1))
+	move_and_slide_with_snap(velocidade_atual, Vector2(0, 5), Vector2(0, -1))
 		
 	pass

@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://chaoTerra.tscn" type="PackedScene" id=1]
 [ext_resource path="res://chaoGrama.tscn" type="PackedScene" id=2]
 [ext_resource path="res://MoedaColetavel.tscn" type="PackedScene" id=3]
 [ext_resource path="res://PlataformaMadeira.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Personagem.tscn" type="PackedScene" id=5]
+[ext_resource path="res://BatataColetavel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=7]
+[ext_resource path="res://BarraVida.tscn" type="PackedScene" id=8]
 
 [node name="Node2D" type="Node2D"]
 
@@ -204,7 +207,7 @@ position = Vector2( 4854.02, 490 )
 position = Vector2( 3090, 310 )
 
 [node name="MoedaColetavel2" parent="." instance=ExtResource( 3 )]
-position = Vector2( 3410, 310 )
+position = Vector2( 3450, 301.856 )
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( 2950, 91.0363 )
@@ -216,9 +219,19 @@ position = Vector2( 3205.82, 90.6987 )
 position = Vector2( 3462.28, 90.5181 )
 
 [node name="Personagem" parent="." instance=ExtResource( 5 )]
-position = Vector2( 530, 256.865 )
+position = Vector2( 20, 372.5 )
 
 [node name="chaoGrama4" parent="." instance=ExtResource( 2 )]
 position = Vector2( -240, 710 )
 scale = Vector2( 0.232452, -1.59911 )
+
+[node name="BatataColetavel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 780, 372.5 )
+
+[node name="BatataColetavel2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1210, 370 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 7 )]
+
+[node name="BarraVida" parent="." instance=ExtResource( 8 )]
 
