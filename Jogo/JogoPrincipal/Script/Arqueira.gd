@@ -30,6 +30,7 @@ func _ready():
 
 func _process(delta):
 	
+	scriptGlobal.vida = vida
 	intervalo = delta
 	
 	velocidade_atual.x = 0
@@ -116,16 +117,24 @@ func _process(delta):
 		if (vida <= 0):
 			scriptGlobal.batata = 0
 			scriptGlobal.moeda = 0
-			get_tree().change_scene("res://Cena/Level1.tscn")
+			if (scriptGlobal.cont == 1):
+				get_tree().change_scene("res://Cena/Level1.tscn")
+			elif (scriptGlobal.cont == 2):
+				get_tree().change_scene("res://Cena/Level2.tscn")
+			elif (scriptGlobal.cont == 3):
+				get_tree().change_scene("res://Cena/Level3.tscn")
+			elif (scriptGlobal.cont == 4):
+				get_tree().change_scene("res://Cena/Level4.tscn")
 		tempo += intervalo
-		if (tempo > 2):
+		if (tempo > 0.5):
 			tempo = 0
 			pass
 	pass
 
 
 func _on_Area2D_body_entered(body):
-	dentro = true
+	if body.is_in_group("Monstros"):
+		dentro = true
 	pass # Replace with function body.
 
 
