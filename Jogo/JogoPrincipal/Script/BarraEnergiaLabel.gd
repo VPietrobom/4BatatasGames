@@ -5,4 +5,4 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	self.text = str(scriptGlobal.energia)
+	self.text = "%.2f" %scriptGlobal.energia
