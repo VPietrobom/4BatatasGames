@@ -36,5 +36,4 @@ margin_bottom = 508.228
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 512.51, 300.397 )
 texture = ExtResource( 1 )
-
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

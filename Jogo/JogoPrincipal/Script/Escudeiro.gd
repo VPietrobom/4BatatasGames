@@ -28,6 +28,8 @@ func _ready():
 
 func _process(delta):
 	
+	scriptGlobal.vida = vida
+	
 	intervalo = delta
 	
 	velocidade_atual.x = 0
@@ -110,14 +112,15 @@ func _process(delta):
 			scriptGlobal.moeda = 0
 			get_tree().change_scene("res://Cena/Level1.tscn")
 		tempo += intervalo
-		if (tempo > 2):
+		if (tempo > 0.5):
 			tempo = 0
 			pass
 	pass
 
 
 func _on_Area2D2_body_entered(body):
-	dentro = true
+	if body.is_in_group("Monstros"):
+		dentro = true
 	pass # Replace with function body.
 
 
