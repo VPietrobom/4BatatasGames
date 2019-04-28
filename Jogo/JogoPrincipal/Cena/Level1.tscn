@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Cena/Level1.gd" type="Script" id=1]
 [ext_resource path="res://chaoTerra.tscn" type="PackedScene" id=2]
@@ -6,10 +6,11 @@
 [ext_resource path="res://MoedaColetavel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://PlataformaMadeira.tscn" type="PackedScene" id=5]
 [ext_resource path="res://BatataColetavel.tscn" type="PackedScene" id=6]
-[ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=7]
-[ext_resource path="res://BarraVida.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Sprite/adam-peterson-arrival-landing.jpg" type="Texture" id=9]
-[ext_resource path="res://MoedaEscondida.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Escuridão.tscn" type="PackedScene" id=7]
+[ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=8]
+[ext_resource path="res://BarraVida.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Sprite/adam-peterson-arrival-landing.jpg" type="Texture" id=10]
+[ext_resource path="res://MoedaEscondida.tscn" type="PackedScene" id=11]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
@@ -231,9 +232,11 @@ position = Vector2( 780, 372.5 )
 [node name="BatataColetavel2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1210, 370 )
 
-[node name="CanvasLayer" parent="." instance=ExtResource( 7 )]
+[node name="Escuridão" parent="." instance=ExtResource( 7 )]
 
-[node name="BarraVida" parent="." instance=ExtResource( 8 )]
+[node name="CanvasLayer" parent="." instance=ExtResource( 8 )]
+
+[node name="BarraVida" parent="." instance=ExtResource( 9 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 editor/display_folded = true
@@ -244,8 +247,8 @@ motion_mirroring = Vector2( 2700, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 scale = Vector2( 1.44193, 1.28 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
-[node name="MoedaEscondida" parent="." instance=ExtResource( 10 )]
+[node name="MoedaEscondida" parent="." instance=ExtResource( 11 )]
 position = Vector2( 3310, -10 )
 
