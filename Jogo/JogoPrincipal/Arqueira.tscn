@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/Arqueira.gd" type="Script" id=1]
-[ext_resource path="res://Sprite/arqueira/parado.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/arqueira/Latacando.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/ConeLuz.png" type="Texture" id=3]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Sprite"
@@ -10,6 +11,9 @@ script/source = "extends Sprite"
 radius = 84.8666
 height = 84.476
 
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 20, -75, 75, 20, -8.66025, 5 )
+
 [node name="Arqueira" type="KinematicBody2D" groups=[
 "Personagem",
 ]]
@@ -17,8 +21,8 @@ position = Vector2( -13.6324, 34.0811 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 __meta__ = {
-"_edit_horizontal_guides_": [  ],
-"_edit_vertical_guides_": [ 38.6782, 106.791 ]
+"_edit_horizontal_guides_": [ 42.698 ],
+"_edit_vertical_guides_": [ 38.6782, 106.791, 120.149, -35.3213 ]
 }
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -30,6 +34,23 @@ script = SubResource( 1 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 104.257, 127.063 )
 shape = SubResource( 2 )
+
+[node name="ConeLuz" type="Area2D" parent="." groups=[
+"Luz",
+]]
+position = Vector2( 104.423, 143.377 )
+
+[node name="Sprite" type="Sprite" parent="ConeLuz"]
+position = Vector2( 3520.06, 977.744 )
+scale = Vector2( 8.086, 7.41 )
+texture = ExtResource( 3 )
+offset = Vector2( -393.218, -125.641 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConeLuz"]
+position = Vector2( 179.345, 1.04201 )
+rotation = 0.523599
+scale = Vector2( 2, 2 )
+shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 scale = Vector2( 0.5, 0.5 )

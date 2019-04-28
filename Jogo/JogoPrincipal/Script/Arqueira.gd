@@ -10,6 +10,11 @@ var puloDuplo = true
 onready var texturaAndando = preload("res://Sprite/arqueira/andando.png")
 onready var texturaParado = preload("res://Sprite/arqueira/parado.png")
 onready var texturaAtaque = preload("res://Sprite/arqueira/atacando.png")
+onready var texturaAndandoLuz = preload("res://Sprite/arqueira/Landando.png")
+onready var texturaParadoLuz = preload("res://Sprite/arqueira/Lparado.png")
+onready var texturaAtaqueLuz = preload("res://Sprite/arqueira/Latacando.png")
+
+var luz = false
 
 var flechaDefinicao = load("res://Flecha.tscn")
 
@@ -23,18 +28,31 @@ func _process(delta):
 	if Input.is_action_pressed("Direita") and !Input.is_action_pressed("Esquerda"):
 		velocidade_atual.x = SPEED
 		dir_x = 1
-		$Sprite.texture = texturaAndando
 		
-		$Sprite.flip_h = false	
+		if(luz):
+			$Sprite.texture = texturaAndandoLuz
+		else:
+			$Sprite.texture = texturaAndando
+			
+		$Sprite.flip_h = false
+		$ConeLuz.rotation_degrees = 0
 	if Input.is_action_pressed("Esquerda") and !Input.is_action_pressed("Direita"):
 		velocidade_atual.x = -SPEED
 		dir_x = -1
-		$Sprite.texture = texturaAndando
+		
+		if(luz):
+			$Sprite.texture = texturaAndandoLuz
+		else:
+			$Sprite.texture = texturaAndando
 		
 		$Sprite.flip_h = true
+		$ConeLuz.rotation_degrees = 180
 	if !Input.is_action_pressed("Direita") and !Input.is_action_pressed("Esquerda"):
-		$Sprite.texture = texturaParado
-	 
+		if(luz):
+			$Sprite.texture = texturaParadoLuz
+		else:
+			$Sprite.texture = texturaParado
+
 	if(is_on_floor()):
 		puloDuplo = true
 		velocidade_atual.y = 0
@@ -45,6 +63,10 @@ func _process(delta):
 		if Input.is_action_just_pressed("Cima"):
 			puloDuplo = false
 			velocidade_atual.y = -jump
+	
+	if(is_on_ceiling()):
+		velocidade_atual.y = 0
+				
 	
 	if(Input.is_action_just_pressed("Ataque")):
 		$Sprite.texture = texturaAtaque
@@ -58,8 +80,17 @@ func _process(delta):
 			flecha.direcao *= -1
 		else:
 			flecha.position.x = position.x + 68
-	if(is_on_ceiling()):
-		velocidade_atual.y = 0
+		
+		luz = false
+	
+	if(Input.is_action_pressed("Lanterna")):
+		$Sprite.texture = texturaAtaqueLuz
+		$ConeLuz/CollisionShape2D.set_disabled(false)
+		$ConeLuz/Sprite.show()
+		luz = true
+	else:
+		$ConeLuz/CollisionShape2D.set_disabled(true)
+		$ConeLuz/Sprite.hide()
 	
 	move_and_slide(velocidade_atual, Vector2(0, -1))
 		

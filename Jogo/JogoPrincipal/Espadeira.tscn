@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Script/Espadeira.gd" type="Script" id=1]
-[ext_resource path="res://Sprite/espadeira/atacando.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/espadeira/Latacando.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/ConeLuz.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 48.1347
@@ -10,6 +11,9 @@ height = 30.0272
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 11.7241
 height = 76.1015
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 20, -75, 75, 20, -8.66025, 5 )
 
 [node name="Espadeira" type="KinematicBody2D" groups=[
 "Personagem",
@@ -33,10 +37,26 @@ position = Vector2( 51.276, 62.2157 )
 shape = SubResource( 1 )
 
 [node name="Espada" type="Area2D" parent="."]
+editor/display_folded = true
 position = Vector2( 63.3111, 67.6243 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Espada"]
 position = Vector2( 58.3109, 1.2683 )
 rotation = 1.5708
 shape = SubResource( 2 )
+
+[node name="ConeLuz" type="Area2D" parent="." groups=[
+"Luz",
+]]
+position = Vector2( 63.311, 67.624 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConeLuz"]
+position = Vector2( 92.8621, -2.51269 )
+rotation = 0.523599
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="ConeLuz"]
+position = Vector2( 173.875, 20.5605 )
+scale = Vector2( 4.043, 3.705 )
+texture = ExtResource( 3 )
 
