@@ -1,18 +1,20 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Sprite/chaoTerra.png" type="Texture" id=1]
+[ext_resource path="res://Sprite/chaoCidadeBaixo.png" type="Texture" id=1]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 128.225, 58.7175 )
+extents = Vector2( 510, 183 )
 
 [node name="chaoCidadeBaixo" type="StaticBody2D"]
+position = Vector2( 1.80832, 491.151 )
+scale = Vector2( 0.25, 0.25 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 128.02, 36.0653 )
-scale = Vector2( 0.25, 0.35 )
+position = Vector2( 0, -270 )
 texture = ExtResource( 1 )
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 127.631, 44.6309 )
+position = Vector2( 510, 250 )
 shape = SubResource( 1 )
 

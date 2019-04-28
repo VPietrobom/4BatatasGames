@@ -1,149 +1,584 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://chaoCidade.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Cena/Level4.gd" type="Script" id=1]
+[ext_resource path="res://chaoCidade.tscn" type="PackedScene" id=2]
+[ext_resource path="res://PlataformaMadeira.tscn" type="PackedScene" id=3]
+[ext_resource path="res://MoedaEscondida.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Sombra.tscn" type="PackedScene" id=5]
+[ext_resource path="res://MoedaColetavel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://BatataColetavel.tscn" type="PackedScene" id=7]
+[ext_resource path="res://EstoqueBatata.tscn" type="PackedScene" id=8]
+[ext_resource path="res://BarraEnergia.tscn" type="PackedScene" id=9]
+[ext_resource path="res://BarraVida.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Shrek.tscn" type="PackedScene" id=11]
+[ext_resource path="res://chaoCidadeBaixo.tscn" type="PackedScene" id=12]
 
 [node name="Level4" type="Node2D"]
+script = ExtResource( 1 )
 
-[node name="chaoCidade" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade" parent="." instance=ExtResource( 2 )]
 
-[node name="chaoCidade19" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2562, 480 )
+[node name="chaoCidade19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2563, 491.395 )
 
-[node name="chaoCidade5" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade5" parent="." instance=ExtResource( 2 )]
 position = Vector2( 770, 491.151 )
 
-[node name="chaoCidade22" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3330, 480 )
+[node name="chaoCidade22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3331, 491.395 )
 
-[node name="chaoCidade38" parent="." instance=ExtResource( 1 )]
-position = Vector2( 5893.81, 480 )
+[node name="chaoCidade38" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5894.81, 491.395 )
 
-[node name="chaoCidade2" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 260, 491.151 )
 
-[node name="chaoCidade18" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2820.19, 480 )
+[node name="chaoCidade18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2819.19, 491.395 )
 
-[node name="chaoCidade4" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2865.19, 491.395 )
+
+[node name="chaoCidade4" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1028.19, 491.151 )
 
-[node name="chaoCidade17" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3588.19, 480 )
+[node name="chaoCidade17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3589.19, 491.395 )
 
-[node name="chaoCidade40" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6152, 480 )
+[node name="chaoCidade40" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6153, 491.395 )
 
-[node name="chaoCidade28" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4102, 480 )
+[node name="chaoCidade28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4103, 491.395 )
 
-[node name="chaoCidade30" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4100, 40 )
+[node name="chaoCidade30" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4098, 40 )
 
-[node name="chaoCidade31" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4356, 130 )
+[node name="chaoCidade31" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4354, 130 )
 
-[node name="chaoCidade32" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade32" parent="." instance=ExtResource( 2 )]
 position = Vector2( 4610, 220 )
 
-[node name="chaoCidade33" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4358, 480 )
+[node name="chaoCidade33" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4359, 491.395 )
 
-[node name="chaoCidade45" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6670, 480 )
+[node name="chaoCidade45" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6671, 491.395 )
 
-[node name="chaoCidade34" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4614, 480 )
+[node name="chaoCidade34" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4615, 491.395 )
 
-[node name="chaoCidade41" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6926, 480 )
+[node name="chaoCidade41" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6927, 491.395 )
 
-[node name="chaoCidade35" parent="." instance=ExtResource( 1 )]
-position = Vector2( 4870, 480 )
+[node name="chaoCidade35" parent="." instance=ExtResource( 2 )]
+position = Vector2( 4871, 491.395 )
 
-[node name="chaoCidade47" parent="." instance=ExtResource( 1 )]
-position = Vector2( 7182, 480 )
+[node name="chaoCidade47" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7183, 491.395 )
 
-[node name="chaoCidade36" parent="." instance=ExtResource( 1 )]
-position = Vector2( 5126, 480 )
+[node name="chaoCidade36" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5127, 491.395 )
 
-[node name="chaoCidade37" parent="." instance=ExtResource( 1 )]
-position = Vector2( 5382, 480 )
+[node name="chaoCidade37" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5383, 491.395 )
 
-[node name="chaoCidade44" parent="." instance=ExtResource( 1 )]
-position = Vector2( 7440, 480 )
+[node name="chaoCidade49" parent="." instance=ExtResource( 2 )]
+position = Vector2( -260, -1250 )
+scale = Vector2( 0.25, 8.85 )
 
-[node name="chaoCidade48" parent="." instance=ExtResource( 1 )]
-position = Vector2( 7440, 390 )
+[node name="chaoCidade51" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6926.99, 215.805 )
 
-[node name="chaoCidade51" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6925.99, 204.41 )
+[node name="chaoCidade71" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6926.99, -148.605 )
 
-[node name="chaoCidade52" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6670, 204.41 )
+[node name="chaoCidade78" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6675.99, -610 )
 
-[node name="chaoCidade29" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3846, 480 )
+[node name="chaoCidade85" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6926.99, -1058.61 )
 
-[node name="chaoCidade46" parent="." instance=ExtResource( 1 )]
-position = Vector2( 6409.81, 480 )
+[node name="chaoCidade87" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7948.99, -1058.61 )
 
-[node name="chaoCidade9" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade53" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6416.99, 215.805 )
+
+[node name="chaoCidade69" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6416.99, -148.605 )
+
+[node name="chaoCidade81" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6165.99, -610 )
+
+[node name="chaoCidade83" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6416.99, -1058.61 )
+
+[node name="chaoCidade84" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7438.99, -1058.61 )
+
+[node name="chaoCidade55" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5916.99, 215.805 )
+
+[node name="chaoCidade52" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6671, 215.805 )
+
+[node name="chaoCidade72" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6671, -148.605 )
+
+[node name="chaoCidade80" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6420, -610 )
+
+[node name="chaoCidade86" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6671, -1058.61 )
+
+[node name="chaoCidade88" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7693, -1058.61 )
+
+[node name="chaoCidade54" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6161, 215.805 )
+
+[node name="chaoCidade70" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6161, -148.605 )
+
+[node name="chaoCidade77" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5910, -610 )
+
+[node name="chaoCidade90" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6161, -1058.61 )
+
+[node name="chaoCidade91" parent="." instance=ExtResource( 2 )]
+position = Vector2( 7183, -1058.61 )
+
+[node name="chaoCidade29" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3847, 491.395 )
+
+[node name="chaoCidade46" parent="." instance=ExtResource( 2 )]
+position = Vector2( 6410.81, 491.395 )
+
+[node name="chaoCidade9" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2050, 130 )
 
-[node name="chaoCidade6" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade6" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1540.19, 311.151 )
 
-[node name="chaoCidade11" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade11" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2562, -50 )
 
-[node name="chaoCidade14" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3332, -50 )
+[node name="chaoCidade14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3330, -50 )
 
-[node name="chaoCidade12" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2820, -50 )
+[node name="chaoCidade12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 2818, -50 )
 
-[node name="chaoCidade15" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3590, -50 )
+[node name="chaoCidade15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3586, -50 )
 
-[node name="chaoCidade13" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3076, -50 )
+[node name="chaoCidade13" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3074, -50 )
 
-[node name="chaoCidade20" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3076.19, 130 )
-
-[node name="chaoCidade26" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade26" parent="." instance=ExtResource( 2 )]
 position = Vector2( 3076.19, 220 )
 
-[node name="chaoCidade27" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade27" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2820.19, 220 )
 
-[node name="chaoCidade24" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3076, 40 )
+[node name="chaoCidade16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3842, -50 )
 
-[node name="chaoCidade21" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2820.19, 130 )
-
-[node name="chaoCidade25" parent="." instance=ExtResource( 1 )]
-position = Vector2( 2820, 40 )
-
-[node name="chaoCidade16" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3846, -50 )
-
-[node name="chaoCidade3" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade3" parent="." instance=ExtResource( 2 )]
 position = Vector2( 516, 491.151 )
 
-[node name="chaoCidade23" parent="." instance=ExtResource( 1 )]
-position = Vector2( 3076.19, 480 )
+[node name="chaoCidade23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3077.19, 491.395 )
 
-[node name="chaoCidade39" parent="." instance=ExtResource( 1 )]
-position = Vector2( 5640, 480 )
+[node name="chaoCidade39" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5641, 491.395 )
 
-[node name="chaoCidade7" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade7" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1284.19, 400 )
 
-[node name="chaoCidade10" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade10" parent="." instance=ExtResource( 2 )]
 position = Vector2( 2306, 38.849 )
 
-[node name="chaoCidade8" parent="." instance=ExtResource( 1 )]
+[node name="chaoCidade8" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1796.19, 220 )
+
+[node name="PlataformaMadeira" parent="." instance=ExtResource( 3 )]
+position = Vector2( 6661, -1358.61 )
+
+[node name="PlataformaMadeira2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7021, -1578.61 )
+
+[node name="PlataformaMadeira3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7381, -1768.61 )
+
+[node name="PlataformaMadeira4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 7021.21, -2028.61 )
+
+[node name="MoedaEscondida" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7121, -2071 )
+
+[node name="MoedaEscondida2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3070, 150 )
+
+[node name="Sombra" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3190, -210 )
+
+[node name="Sombra2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2650, 278.305 )
+
+[node name="Sombra3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6430.94, 61.8557 )
+
+[node name="MoedaColetavel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 4620, 30 )
+
+[node name="MoedaColetavel2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 5230, 330 )
+
+[node name="BatataColetavel" parent="." instance=ExtResource( 7 )]
+position = Vector2( 1590, 250 )
+
+[node name="BatataColetavel4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3690, -150 )
+
+[node name="BatataColetavel2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 6491, 419.895 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 8 )]
+
+[node name="BarraEnergia" parent="." instance=ExtResource( 9 )]
+
+[node name="BarraVida" parent="." instance=ExtResource( 10 )]
+
+[node name="Shrek" parent="." instance=ExtResource( 11 )]
+position = Vector2( 6381, -848.605 )
+
+[node name="BatataColetavel3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 6471, -218.605 )
+
+[node name="chaoCidadeBaixo" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1284.19, 491.151 )
+
+[node name="chaoCidadeBaixo2" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1540.19, 491.151 )
+
+[node name="chaoCidadeBaixo5" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1796.19, 491.151 )
+
+[node name="chaoCidadeBaixo7" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2052.19, 491.151 )
+
+[node name="chaoCidadeBaixo12" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2308.19, 401.151 )
+
+[node name="chaoCidadeBaixo3" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1540.19, 400 )
+
+[node name="chaoCidadeBaixo4" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1796.19, 400 )
+
+[node name="chaoCidadeBaixo8" parent="." instance=ExtResource( 12 )]
+position = Vector2( 1796.19, 311.151 )
+
+[node name="chaoCidadeBaixo11" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2050, 220 )
+
+[node name="chaoCidadeBaixo14" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2306, 130 )
+
+[node name="chaoCidadeBaixo17" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3330, 40 )
+
+[node name="chaoCidadeBaixo40" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5660, 36.1953 )
+
+[node name="chaoCidadeBaixo58" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -508.67 )
+
+[node name="chaoCidadeBaixo62" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.49, -1047.27 )
+
+[node name="chaoCidadeBaixo77" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.49, -1588.67 )
+
+[node name="chaoCidadeBaixo86" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.49, -2128.67 )
+
+[node name="chaoCidadeBaixo96" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.49, -2668.67 )
+
+[node name="chaoCidadeBaixo46" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.77, -235.135 )
+
+[node name="chaoCidadeBaixo49" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5657.26, -776.27 )
+
+[node name="chaoCidadeBaixo66" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5657.26, -1318.6 )
+
+[node name="chaoCidadeBaixo72" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5657.26, -1860 )
+
+[node name="chaoCidadeBaixo92" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5657.26, -2400 )
+
+[node name="chaoCidadeBaixo100" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5657.26, -2940 )
+
+[node name="chaoCidadeBaixo34" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3330, 40 )
+
+[node name="chaoCidadeBaixo37" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5660, 36.1953 )
+
+[node name="chaoCidadeBaixo54" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -508.67 )
+
+[node name="chaoCidadeBaixo63" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.49, -1047.27 )
+
+[node name="chaoCidadeBaixo78" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.49, -1588.67 )
+
+[node name="chaoCidadeBaixo87" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.49, -2128.67 )
+
+[node name="chaoCidadeBaixo104" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.49, -2668.67 )
+
+[node name="chaoCidadeBaixo44" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.77, -235.135 )
+
+[node name="chaoCidadeBaixo48" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5661, -776.27 )
+
+[node name="chaoCidadeBaixo65" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5657.26, -1318.6 )
+
+[node name="chaoCidadeBaixo71" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5657.26, -1860 )
+
+[node name="chaoCidadeBaixo88" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5657.26, -2400 )
+
+[node name="chaoCidadeBaixo105" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5657.26, -2940 )
+
+[node name="chaoCidadeBaixo22" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3586, 40 )
+
+[node name="chaoCidadeBaixo25" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3842, 38.849 )
+
+[node name="chaoCidadeBaixo6" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2052.19, 400 )
+
+[node name="chaoCidadeBaixo15" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2308.19, 310 )
+
+[node name="chaoCidadeBaixo18" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3331, 219.628 )
+
+[node name="chaoCidadeBaixo38" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5661, 215.823 )
+
+[node name="chaoCidadeBaixo51" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -325.312 )
+
+[node name="chaoCidadeBaixo68" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -867.646 )
+
+[node name="chaoCidadeBaixo81" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -1409.04 )
+
+[node name="chaoCidadeBaixo91" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -1949.04 )
+
+[node name="chaoCidadeBaixo99" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -2489.04 )
+
+[node name="chaoCidadeBaixo42" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.77, -55.507 )
+
+[node name="chaoCidadeBaixo57" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5661, -600.372 )
+
+[node name="chaoCidadeBaixo60" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -1138.98 )
+
+[node name="chaoCidadeBaixo73" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -1680.37 )
+
+[node name="chaoCidadeBaixo93" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -2220.37 )
+
+[node name="chaoCidadeBaixo101" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -2760.37 )
+
+[node name="chaoCidadeBaixo32" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3331, 219.628 )
+
+[node name="chaoCidadeBaixo35" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5661, 215.823 )
+
+[node name="chaoCidadeBaixo50" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -325.312 )
+
+[node name="chaoCidadeBaixo67" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -867.646 )
+
+[node name="chaoCidadeBaixo74" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -1409.04 )
+
+[node name="chaoCidadeBaixo139" parent="." instance=ExtResource( 12 )]
+position = Vector2( 7430, -1280 )
+scale = Vector2( 1.9874, 4.8906 )
+
+[node name="chaoCidadeBaixo154" parent="." instance=ExtResource( 12 )]
+position = Vector2( 8204.99, -3060 )
+scale = Vector2( 1.9874, 4.8906 )
+
+[node name="chaoCidadeBaixo89" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -1949.04 )
+
+[node name="chaoCidadeBaixo97" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -2489.04 )
+
+[node name="chaoCidadeBaixo41" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.77, -55.507 )
+
+[node name="chaoCidadeBaixo56" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5661, -600.372 )
+
+[node name="chaoCidadeBaixo61" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -1138.98 )
+
+[node name="chaoCidadeBaixo76" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -1680.37 )
+
+[node name="chaoCidadeBaixo85" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -2220.37 )
+
+[node name="chaoCidadeBaixo103" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -2760.37 )
+
+[node name="chaoCidadeBaixo20" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3587, 219.628 )
+
+[node name="chaoCidadeBaixo28" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3587, 219.628 )
+
+[node name="chaoCidadeBaixo31" parent="." instance=ExtResource( 12 )]
+position = Vector2( 4098, 219.628 )
+
+[node name="chaoCidadeBaixo24" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3843, 218.477 )
+
+[node name="chaoCidadeBaixo26" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3845.19, 220 )
+
+[node name="chaoCidadeBaixo30" parent="." instance=ExtResource( 12 )]
+position = Vector2( 4354, 220 )
+
+[node name="chaoCidadeBaixo9" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2052.19, 311.151 )
+
+[node name="chaoCidadeBaixo13" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2306, 219.719 )
+
+[node name="chaoCidadeBaixo19" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3331, 130 )
+
+[node name="chaoCidadeBaixo39" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5661, 126.195 )
+
+[node name="chaoCidadeBaixo55" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5660.49, -418.67 )
+
+[node name="chaoCidadeBaixo59" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -957.274 )
+
+[node name="chaoCidadeBaixo75" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -1498.67 )
+
+[node name="chaoCidadeBaixo84" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -2038.67 )
+
+[node name="chaoCidadeBaixo102" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -2578.67 )
+
+[node name="chaoCidadeBaixo45" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.77, -145.135 )
+
+[node name="chaoCidadeBaixo52" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5661, -690 )
+
+[node name="chaoCidadeBaixo69" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -1228.6 )
+
+[node name="chaoCidadeBaixo82" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -1770 )
+
+[node name="chaoCidadeBaixo94" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -2310 )
+
+[node name="chaoCidadeBaixo95" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -2850 )
+
+[node name="chaoCidadeBaixo33" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3331, 130 )
+
+[node name="chaoCidadeBaixo36" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5661, 126.195 )
+
+[node name="chaoCidadeBaixo53" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5660.49, -418.67 )
+
+[node name="chaoCidadeBaixo70" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -957.274 )
+
+[node name="chaoCidadeBaixo80" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -1498.67 )
+
+[node name="chaoCidadeBaixo90" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -2038.67 )
+
+[node name="chaoCidadeBaixo98" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.49, -2578.67 )
+
+[node name="chaoCidadeBaixo43" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5659.77, -145.135 )
+
+[node name="chaoCidadeBaixo47" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5661, -690 )
+
+[node name="chaoCidadeBaixo64" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -1228.6 )
+
+[node name="chaoCidadeBaixo79" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -1770 )
+
+[node name="chaoCidadeBaixo83" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -2310 )
+
+[node name="chaoCidadeBaixo106" parent="." instance=ExtResource( 12 )]
+position = Vector2( 5658.26, -2850 )
+
+[node name="chaoCidadeBaixo21" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3587, 130 )
+
+[node name="chaoCidadeBaixo27" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3587, 130 )
+
+[node name="chaoCidadeBaixo29" parent="." instance=ExtResource( 12 )]
+position = Vector2( 4098, 130 )
+
+[node name="chaoCidadeBaixo23" parent="." instance=ExtResource( 12 )]
+position = Vector2( 3843, 128.849 )
+
+[node name="chaoCidadeBaixo10" parent="." instance=ExtResource( 12 )]
+position = Vector2( 2308.19, 491.151 )
 
