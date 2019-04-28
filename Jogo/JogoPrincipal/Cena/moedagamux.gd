@@ -4,8 +4,6 @@ extends Area2D
 # var a = 2
 # var b = "text"
 
-var moedaDefinicao = load("res://Cena/moedagamux.tscn")
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -14,9 +12,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-func _on_MoedaEscondida_area_entered(area):
-	if(area.is_in_group("Luz")):
-		var moeda = moedaDefinicao.instance()
-		get_parent().add_child(moeda)
-		moeda.position = position
+
+func _on_MoedaColetavel_body_entered(body):
+	if(body.is_in_group("Personagem")):
+		scriptGlobal.moeda += 1
 		self.queue_free()
+	pass # Replace with function body.
