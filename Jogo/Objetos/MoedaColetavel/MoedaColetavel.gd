@@ -14,7 +14,7 @@ func _ready():
 
 
 func _on_MoedaColetavel_body_entered(body):
-	if(body == personagem and self.visible):
+	if(body.get_name() == "Personagem"):
 		scriptGlobal.moeda += 1
-		self.hide()
+		self.queue_free()
 	pass # Replace with function body.
