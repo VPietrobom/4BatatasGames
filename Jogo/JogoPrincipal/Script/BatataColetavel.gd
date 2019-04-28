@@ -14,7 +14,7 @@ func _ready():
 
 
 func _on_BatataColetavel_body_entered(body):
-	if(body.get_name() == "Personagem"):
+	if(body.is_in_group("Personagem")):
 		scriptGlobal.batata += 1
 		self.queue_free()
 	pass # Replace with function body.
