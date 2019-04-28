@@ -10,6 +10,11 @@ var puloDuplo = true
 onready var texturaAndando = preload("res://Sprite/lanceiro/andando.png")
 onready var texturaParado = preload("res://Sprite/lanceiro/parado.png")
 onready var texturaAtaque = preload("res://Sprite/lanceiro/atacando.png")
+onready var texturaAndandoLuz = preload("res://Sprite/lanceiro/Landando.png")
+onready var texturaParadoLuz = preload("res://Sprite/lanceiro/Lparado.png")
+onready var texturaAtaqueLuz = preload("res://Sprite/lanceiro/Latacando.png")
+
+var luz = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,19 +26,32 @@ func _process(delta):
 	if Input.is_action_pressed("Direita") and !Input.is_action_pressed("Esquerda"):
 		velocidade_atual.x = SPEED
 		dir_x = 1
-		$Sprite.texture = texturaAndando
 		
+		if(luz):
+			$Sprite.texture = texturaAndandoLuz
+		else:
+			$Sprite.texture = texturaAndando
+			
 		$Sprite.flip_h = false	
 		$Area2D.rotation_degrees = 0
+		$ConeLuz.rotation_degrees = 0
 	if Input.is_action_pressed("Esquerda") and !Input.is_action_pressed("Direita"):
 		velocidade_atual.x = -SPEED
 		dir_x = -1
-		$Sprite.texture = texturaAndando
+		
+		if(luz):
+			$Sprite.texture = texturaAndandoLuz
+		else:
+			$Sprite.texture = texturaAndando
 		
 		$Sprite.flip_h = true
 		$Area2D.rotation_degrees = 180
+		$ConeLuz.rotation_degrees = 180
 	if !Input.is_action_pressed("Direita") and !Input.is_action_pressed("Esquerda"):
-		$Sprite.texture = texturaParado
+		if(luz):
+			$Sprite.texture = texturaParadoLuz
+		else:
+			$Sprite.texture = texturaParado
 
 	if(is_on_floor()):
 		puloDuplo = true
@@ -53,9 +71,18 @@ func _process(delta):
 	if(Input.is_action_just_pressed("Ataque")):
 		$Sprite.texture = texturaAtaque
 		$Area2D/CollisionShape2D.set_disabled(false)
-		
-		pass
+		luz = false
 	
+	
+	if(Input.is_action_pressed("Lanterna")):
+		$Sprite.texture = texturaAtaqueLuz
+		$ConeLuz/CollisionShape2D.set_disabled(false)
+		$ConeLuz/Sprite.show()
+		luz = true
+	else:
+		$ConeLuz/CollisionShape2D.set_disabled(true)
+		$ConeLuz/Sprite.hide()
+
 	move_and_slide(velocidade_atual, Vector2(0, -1))
 		
 	pass

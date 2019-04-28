@@ -18,4 +18,5 @@ texture = ExtResource( 2 )
 position = Vector2( 17.7513, 17.6056 )
 shape = SubResource( 1 )
 
+[connection signal="area_entered" from="." to="." method="_on_MoedaEscondida_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_MoedaEscondida_body_entered"]

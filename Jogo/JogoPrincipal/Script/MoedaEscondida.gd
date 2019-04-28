@@ -14,12 +14,9 @@ func _ready():
 #func _process(delta):
 #	pass
 
-
-func _on_MoedaEscondida_body_entered(body):
-	var moeda = moedaDefinicao.instance()
-	get_parent().add_child(moeda)
-	moeda.position = position
-	
-	self.queue_free()
-	
-	pass # Replace with function body.
+func _on_MoedaEscondida_area_entered(area):
+	if(area.is_in_group("Luz")):
+		var moeda = moedaDefinicao.instance()
+		get_parent().add_child(moeda)
+		moeda.position = position
+		self.queue_free()

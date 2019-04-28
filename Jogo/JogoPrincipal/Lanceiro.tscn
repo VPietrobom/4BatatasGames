@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Script/Lanceiro.gd" type="Script" id=1]
-[ext_resource path="res://Sprite/lanceiro/parado.png" type="Texture" id=2]
+[ext_resource path="res://Sprite/lanceiro/Latacando.png" type="Texture" id=2]
 [ext_resource path="res://Script/SpriteArqueiro.gd" type="Script" id=3]
+[ext_resource path="res://Sprite/ConeLuz.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 38.8819
@@ -11,6 +12,9 @@ height = 55.0648
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 12.502
 height = 115.589
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 20, -75, 75, 20, -8.66025, 5 )
 
 [node name="Lanceiro" type="KinematicBody2D" groups=[
 "Personagem",
@@ -43,4 +47,20 @@ current = true
 limit_left = 0
 limit_bottom = 600
 smoothing_enabled = true
+
+[node name="ConeLuz" type="Area2D" parent="." groups=[
+"Luz",
+]]
+position = Vector2( 64.0775, 60.4675 )
+
+[node name="Sprite" type="Sprite" parent="ConeLuz"]
+position = Vector2( 172.369, 23.7797 )
+scale = Vector2( 4.0433, 3.70505 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ConeLuz"]
+position = Vector2( 91.0324, 0 )
+rotation = 0.523599
+scale = Vector2( 1.08426, 1.01345 )
+shape = SubResource( 3 )
 
