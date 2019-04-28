@@ -7,6 +7,7 @@ var cena_personagem = load(scriptGlobal.hero)
 var personagem = null
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	scriptGlobal.cont +=1
 	var personagem = cena_personagem.instance()
 	personagem.name = "Personagem"
 	personagem.get_node("Camera2D").set_limit(2, 13503.711)	

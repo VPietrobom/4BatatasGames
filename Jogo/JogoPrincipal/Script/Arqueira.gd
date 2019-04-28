@@ -117,7 +117,14 @@ func _process(delta):
 		if (vida <= 0):
 			scriptGlobal.batata = 0
 			scriptGlobal.moeda = 0
-			get_tree().change_scene("res://Cena/Level1.tscn")
+			if (scriptGlobal.cont == 1):
+				get_tree().change_scene("res://Cena/Level1.tscn")
+			elif (scriptGlobal.cont == 2):
+				get_tree().change_scene("res://Cena/Level2.tscn")
+			elif (scriptGlobal.cont == 3):
+				get_tree().change_scene("res://Cena/Level3.tscn")
+			elif (scriptGlobal.cont == 4):
+				get_tree().change_scene("res://Cena/Level4.tscn")
 		tempo += intervalo
 		if (tempo > 0.5):
 			tempo = 0

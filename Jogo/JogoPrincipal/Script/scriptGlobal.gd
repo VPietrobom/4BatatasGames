@@ -14,6 +14,7 @@ var hero = "res://Arqueira.tscn"
 var timer = false
 var inArea = false
 var dano = 0
+var cont = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
