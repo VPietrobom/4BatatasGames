@@ -45,11 +45,14 @@ func _process(delta):
 		if Input.is_action_just_pressed("Cima"):
 			puloDuplo = false
 			velocidade_atual.y = -jump
-			
-	$CollisionShape2D.disable = true
-	if(Input.is_action_just_pressed("Atacar")):
+	
+	if(is_on_ceiling()):
+		velocidade_atual.y = 0
+				
+	$Area2D/CollisionShape2D.set_disabled(true)
+	if(Input.is_action_just_pressed("Ataque")):
 		$Sprite.texture = texturaAtaque
-		$CollisionShape2D.disable = false
+		$Area2D/CollisionShape2D.set_disabled(false)
 		
 		pass
 	

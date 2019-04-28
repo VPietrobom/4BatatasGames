@@ -12,7 +12,9 @@ height = 55.0648
 radius = 12.502
 height = 115.589
 
-[node name="Lanceiro" type="KinematicBody2D"]
+[node name="Lanceiro" type="KinematicBody2D" groups=[
+"Personagem",
+]]
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -34,4 +36,11 @@ position = Vector2( 64.0775, 60.4675 )
 position = Vector2( 91.4427, -1.86438 )
 rotation = 1.5708
 shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotating = true
+current = true
+limit_left = 0
+limit_bottom = 600
+smoothing_enabled = true
 
