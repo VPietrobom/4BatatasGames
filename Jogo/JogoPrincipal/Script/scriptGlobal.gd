@@ -2,8 +2,9 @@ extends Node
 
 var moeda = 0
 var batata = 0
-var personagemEscolhido = 0
+var personagemEscolhido = -1
 var vida = 100
+var temLanterna
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
