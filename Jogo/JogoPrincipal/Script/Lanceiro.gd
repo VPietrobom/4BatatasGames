@@ -64,7 +64,7 @@ func _process(delta):
 			puloDuplo = false
 			velocidade_atual.y = -jump
 	
-	if(is_on_ceiling()):
+	if(is_on_ceiling() and velocidade_atual.y < 0):
 		velocidade_atual.y = 0
 				
 	$Area2D/CollisionShape2D.set_disabled(true)
@@ -74,14 +74,21 @@ func _process(delta):
 		luz = false
 	
 	
-	if(Input.is_action_pressed("Lanterna")):
-		$Sprite.texture = texturaAtaqueLuz
-		$ConeLuz/CollisionShape2D.set_disabled(false)
-		$ConeLuz/Sprite.show()
-		luz = true
+	if(Input.is_action_pressed("Lanterna") and scriptGlobal.temLanterna):
+		scriptGlobal.lanterna = true
+		
+		if(scriptGlobal.energia>0):
+			$Sprite.texture = texturaAtaqueLuz
+			$ConeLuz/CollisionShape2D.set_disabled(false)
+			$ConeLuz/Sprite.show()
+			luz = true
+		else:
+			$ConeLuz/CollisionShape2D.set_disabled(true)
+			$ConeLuz/Sprite.hide()
 	else:
 		$ConeLuz/CollisionShape2D.set_disabled(true)
 		$ConeLuz/Sprite.hide()
+		scriptGlobal.lanterna = false
 
 	move_and_slide(velocidade_atual, Vector2(0, -1))
 		
