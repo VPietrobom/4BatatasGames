@@ -8,6 +8,9 @@ var personagem = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	
+	scriptGlobal.cont += 1
+	
 	$Escuridao.show()
 	var personagem = cena_personagem.instance()
 	personagem.name = "Personagem"

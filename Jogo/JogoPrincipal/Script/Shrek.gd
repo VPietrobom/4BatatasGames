@@ -28,7 +28,7 @@ func _process(delta):
 		if (is_on_floor()):
 			velocidade_atual.y = 0
 			pass
-		if (is_on_wall() and is_on_floor()):
+		if (is_on_wall() and is_on_floor()) :
 			velocidade_atual.y -= jump
 			pass
 		pass

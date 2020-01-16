@@ -6,7 +6,7 @@ extends KinematicBody2D
 
 onready var Jogador = null
 
-var velocidade_atual = Vector2(0, 0)
+
 var SPEED = 100
 var GRAVITY = 2000
 var jump = 800
@@ -23,10 +23,6 @@ onready var texturaParado3 = preload("res://Sprite/vilões player/lancaparado.pn
 var vida = 5
 
 var velocidade = Vector2(0,0)
-
-var orientacao = "direita"
-
-var posicaoAnterior = Vector2(0,0)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -56,8 +52,9 @@ func _process(delta):
 	move_and_slide_with_snap(velocidade, Vector2(0,5), Vector2(0, -1))
 	
 	
-func levardano(x):
+func levardano():
 	pass
+
 func _on_Area2D_area_entered(area):
 	if(area.is_in_group("Luz")):
 		vida -= 1
